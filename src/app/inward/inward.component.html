@@ -1,0 +1,134 @@
+<!-- Main Toolbar of an App -->  
+<mat-toolbar color="accent">  
+    <span>Industry Project</span>  
+    <span class="demo-toolbar"></span>  
+    <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Setting</button>  
+  
+</mat-toolbar>  
+  
+<!-- Card container that binds all togather -->  
+<mat-card>  
+    <!-- Title of an Card -->  
+    <mat-card-title>  
+        Inward
+    </mat-card-title>  
+  
+    <!-- Actual content starts from here -->  
+    <mat-card-content>  
+        <form [formGroup]="inwardForm" (ngSubmit)="onFormSubmit(inwardForm.value)">  
+            <table>  
+                <tr>  
+                    <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="chalan_number" matInput 
+                            type="number" placeholder="chalan Number">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!inwardForm.get('chalan_number').valid && inwardForm.get('chalan_number').touched">Please enter Chalan number !!!</span>  
+                        </mat-error>  
+                    </td>  
+                   
+                </tr>  
+
+            <tr>
+                <td>
+                  <mat-form-field>  
+                      <mat-select formControlName="FoundryName" placeholder="Foundry Name">  
+                          <mat-option>-- Select Any --</mat-option>  
+                          <mat-option value="Saroj_industries">Saroj industries</mat-option>  
+                          <mat-option value="Sai_industries">Sai industries</mat-option>  
+                           
+                      </mat-select>  
+                      <mat-error>  
+                          <span *ngIf="!inwardForm.get('FoundryName').valid && inwardForm.get('FoundryName').touched">Please select Foundry Name !!!</span>  
+                      </mat-error>  
+                  </mat-form-field>  
+              </td>  
+            </tr> 
+
+
+             <tr>             
+                <td>  
+                    <mat-form-field class="demo-full-width">  
+                        <input formControlName="jobName" matInput placeholder="job Name">  
+                    </mat-form-field>  
+                    <mat-error>  
+                        <span *ngIf="!inwardForm.get('jobName').valid && inwardForm.get('jobName').touched">Please enter job name !!!</span>  
+                    </mat-error>  
+                </td>  
+            </tr>   
+
+ 
+
+
+              
+                <tr>  
+                    <td colspan="2">  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="inwardDate" matInput [matDatepicker]="picker" placeholder="Inward Date">  
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>  
+                            <mat-datepicker touchUi="true" #picker></mat-datepicker>  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!inwardForm.get('inwardDate').valid && inwardForm.get('inwardDate').touched">Please select Inward Date !!!</span>  
+                        </mat-error>  
+                    </td>  
+                </tr>   
+                 <tr>  
+                    <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="inwardQuantity" matInput  type="number" placeholder="Inward Quantity">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!inwardForm.get('inwardQuantity').valid && inwardForm.get('inwardQuantity').touched">Please enter Inward Quantity !!!</span>  
+                        </mat-error>  
+                    </td>  
+                    
+                </tr>   
+               
+                 <tr>
+                <td>
+                  <mat-form-field>  
+                      <mat-select formControlName="inwardProcess" placeholder="Inward Process">  
+                          <mat-option>-- Select Any --</mat-option>  
+                          <mat-option value="Clamp_topr">Clamp top</mat-option>  
+                          <mat-option value="finishing">Finishing</mat-option>  
+                           
+                      </mat-select>  
+                      <mat-error>  
+                          <span *ngIf="!inwardForm.get('inwardProcess').valid && inwardForm.get('inwardProcess').touched">Please select Foundry Name !!!</span>  
+                      </mat-error>  
+                  </mat-form-field>  
+              </td>  
+            </tr> 
+            <tr>
+                <td>  
+                    <mat-form-field class="demo-full-width">  
+                        <input formControlName="inwardAddedBy" matInput placeholder="added by">  
+                    </mat-form-field>  
+                    <mat-error>  
+                        <span *ngIf="!inwardForm.get('inwardAddedBy').valid && inwardForm.get('inwardAddedBy').touched">Please provide your name !!!</span>  
+                    </mat-error>  
+                </td>  
+            </tr> 
+                
+   
+
+                <tr> 
+                    <td colspan="2">
+                            <button mat-raised-button color="accent" [disabled]="!inwardForm.valid">Submit</button>  
+
+                    </td>
+
+                    <td colspan="2" class="content-center">  
+                        <button mat-raised-button color="accent" type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset</button> 
+
+                    </td>  
+                </tr>  
+                <tr>  
+                    <td></td>  
+                </tr>  
+            </table>  
+        </form>  
+    </mat-card-content>  
+</mat-card>  

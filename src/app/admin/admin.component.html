@@ -1,0 +1,95 @@
+<!-- Main Toolbar of an App -->  
+<mat-toolbar color="accent">  
+    <span>Industry Project</span>  
+    <span class="demo-toolbar"></span>  
+    <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Setting</button>  
+  
+</mat-toolbar>  
+  
+<!-- Card container that binds all togather -->  
+<mat-card>  
+    <!-- Title of an Card -->  
+    <mat-card-title>  
+        Admin Panel
+    </mat-card-title>  
+  <br><br>
+    <!-- Actual content starts from here -->  
+    <mat-card-content>  
+        <form [formGroup]="adminForm" (ngSubmit)="onFormSubmit(adminForm.value)">  
+            <table>  
+                <tr>  
+                    <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="foundryName" matInput 
+                             placeholder="foundry name" [(ngModel)]="example.first">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!adminForm.get('foundryName').valid && adminForm.get('foundryName').touched">Please enter Foundry Name !!!</span>  
+                        </mat-error>  
+                    </td>  
+                </tr>
+
+
+
+                      <tr> 
+                    <td colspan="2">
+                            <button mat-raised-button color="accent" [disabled]="!adminForm.valid">Submit</button>  
+
+                    </td>
+
+                    <td colspan="2" class="content-center">  
+                        <button mat-raised-button color="accent" type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset</button> 
+
+                    </td>  
+                </tr>  
+
+                 
+      </table>
+            </form>
+
+          </mat-card-content>
+</mat-card>
+
+
+
+
+<!-- Card container that binds all togather -->  
+<mat-card>  
+    <!-- Title of an Card -->  
+    <mat-card-title>  
+       
+    </mat-card-title>  
+  
+    <!-- Actual content starts from here -->  
+    <mat-card-content>  
+      
+
+<!-- 
+<form>
+<table>
+    <tr>
+        <td>
+            <mat-form-field>
+                <input matInput [(ngModel)]="name" placeholder="What's your name?">
+              </mat-form-field>
+        </td>
+        <td>
+            <button mat-raised-button (click)="openDialog()">Pick one</button>
+        </td>
+        <td *ngIf="animal">
+            You chose: <i>{{animal}}</i>
+        </td>
+    </tr>
+            
+</table>
+
+</form> -->
+
+          </mat-card-content>
+</mat-card>
+
+
+            
+
+
+  
