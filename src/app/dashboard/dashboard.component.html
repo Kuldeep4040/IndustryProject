@@ -1,7 +1,49 @@
-<div class="container">
-  <div class="name">Hi, {{getUserEmail()}}</div>
+<!-- <p class="alter-way">
+    <a [routerLink]="'/inward'">Inward Data</a>
+</p>
+<p class="alter-way">
+<a [routerLink]="'/outward'">Outward Data</a>
+</p>
+<button class="btn" (click)="logout()">logout</button> -->
+<!-- <p class="alter-way">
+<a [routerLink]="'/admin'">Admin</a>
+</p> -->
 
-  <a [routerLink]="'/inward'">Inward Data</a>
 
-  <button class="btn" (click)="logout()">logout</button>
-</div>
+
+<!-- Application header starts -->
+<div class="app-header">
+        
+  </div>
+  <!-- Application header ends -->
+  
+  <mat-grid-list cols="3">
+      <mat-grid-tile></mat-grid-tile>
+  
+      <!-- Writing markup for login starts -->
+      <mat-grid-tile class='login-element'>
+          <div class="login-container">
+  
+        <!-- Template Header starts -->
+        <div class="login-box-header">
+        </div>
+        <!-- Template Header ends -->
+
+        <!-- Template Body starts -->
+        <div class="login-box-body">
+            <p class="alter-way">
+                <a [routerLink]="'/inward'">Inward Data</a>
+            </p>
+            <p class="alter-way">
+            <a [routerLink]="'/outward'">Outward Data</a>
+            </p>
+            <button class="btn" (click)="logout()">logout</button>
+          </div>
+          <!-- Template Body ends -->
+          
+      </div>
+  </mat-grid-tile>
+  <!-- Writing markup for login ends -->
+  <mat-grid-tile></mat-grid-tile>
+
+</mat-grid-list>

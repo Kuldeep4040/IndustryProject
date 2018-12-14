@@ -1,14 +1,47 @@
-.container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.4rem;
-  color: rgb(165, 158, 158);
-  flex-direction: column;
+/* You can add global styles to this file, and also import other style files */
+
+.mat-card {
+  text-align: -webkit-center;
 }
 
-.btn {
-  margin-top: 1.2rem;
+.demo-toolbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.demo-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.demo-full-width {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+mat-card {
+  max-width: 80%;
+  margin: 2em auto;
+  text-align: center;
+}
+
+mat-toolbar-row {
+  justify-content: space-between;
+}
+
+.done {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+.content-center {
+  text-align: -webkit-center;
 }

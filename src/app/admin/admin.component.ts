@@ -49,8 +49,8 @@ openDialog(): void {
 
 }
 @Component({
-  selector: 'app-dialog-overview-example-dialog',
-  templateUrl: './dialog-overview-example-dialog.html',
+  selector: 'inward-modal',
+  templateUrl: './inward-modal.html',
 })
 export class DialogOverviewExampleDialog {
 

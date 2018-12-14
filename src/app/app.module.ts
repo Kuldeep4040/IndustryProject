@@ -14,11 +14,35 @@ import { AdminComponent } from './admin/admin.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';  
 import {MatDialogModule} from '@angular/material/dialog';
 
-import {DialogOverviewExampleDialog} from './admin/admin.component';
+import { DialogOverviewExampleDialog } from "./admin/admin.component";
 
 // import {MatDialog, MatDialogRef} from '@angular/material';
 
 import {  
+  
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatListModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatTreeModule,
+  MatGridListModule,
   MatButtonModule,  
   MatMenuModule,  
   MatToolbarModule,  
@@ -31,7 +55,8 @@ import {
   MatNativeDateModule,  
   MatRadioModule,  
   MatSelectModule,  
-  MatOptionModule,  
+  MatOptionModule, 
+ 
   MatSlideToggleModule,ErrorStateMatcher,ShowOnDirtyErrorStateMatcher  
 } from '@angular/material';  
 
@@ -48,6 +73,30 @@ import {
     DialogOverviewExampleDialog,
   ],
   imports: [
+    
+    MatGridListModule ,
+    MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatListModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatTreeModule,
     BrowserModule,
     FormsModule,
     MatButtonModule,
@@ -68,6 +117,7 @@ import {
     MatSelectModule,  
     MatOptionModule,  
     MatDialogModule,
+    
     // MatDialog,
     // MatDialogRef,
 
@@ -79,7 +129,8 @@ import {
       { path: 'outward', component: OutwardComponent },
       { path: 'admin', component: AdminComponent },
       { path: 'signup', component: SignupComponent, data: { animation: 'signup' } },
-      { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+      { path: 'dashboard', component: DashboardComponent }, 
+      // canActivate: [AuthGuard]
       { path: '**', redirectTo: '/login' },
     
     ], {
@@ -88,6 +139,7 @@ import {
   ],
   
   exports: [  
+    MatGridListModule,
     MatButtonModule,  
     MatMenuModule,  
     MatToolbarModule,  
@@ -102,6 +154,28 @@ import {
     MatSelectModule,  
     MatOptionModule,  
     MatDialogModule,
+    MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonToggleModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatListModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRippleModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatTooltipModule,
+  MatTreeModule,
     // MatDialog,
     // MatDialogRef,
     MatSlideToggleModule  

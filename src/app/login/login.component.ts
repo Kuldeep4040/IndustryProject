@@ -1,32 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
+export class LoginComponent  {
+  
+  constructor(private router : Router) {
   }
 
-  onFormSubmit(data) {
+  username : string
+  password : string
 
-    console.log(data);
-    localStorage.setItem('email', data.email);
-    localStorage.setItem('pass', data.password);
-    var email=localStorage.getItem('email');
-    var pass=localStorage.getItem('pass');
-    if(email=='admin@gmail.com' && pass=='123456'){
+  login() : void {
+    if(this.username == 'admin' && this.password == 'admin'){
+     this.router.navigate(["/admin"]);
+     
+    }
+    else if(this.username == 'kd' && this.password == 'kd'){
+      this.router.navigate(["/dashboard"]);
+    }
+    else {
       
-    this.router.navigateByUrl('/dashboard');
+      alert("Invalid credentials");
+     
+    }
   }
-  else{
-   console.log("error while login");
-  }
-  }
-
 }
