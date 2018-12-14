@@ -26,11 +26,18 @@ body {
 }
 
 mat-card {
-    max-width: 80%;
+    max-width: auto;
+    
     margin: 2em auto;
     text-align: center;
 }
-
+.mat-form-field-infix {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    width: 220px;
+}
 mat-toolbar-row {
     justify-content: space-between;
 }
