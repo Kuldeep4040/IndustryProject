@@ -2,7 +2,7 @@
 <mat-toolbar color="accent">  
     <span>Industry Project</span>  
     <span class="demo-toolbar"></span>  
-    <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Setting</button>  
+    <button mat-button >Setting</button>  
   
 </mat-toolbar>  
   
@@ -18,10 +18,10 @@
         <form [formGroup]="inwardForm" (ngSubmit)="onFormSubmit(inwardForm.value)">  
             <table>  
                 <tr>  
-                    <td colspan="0">  
+                    <td>  
                         <mat-form-field class="demo-full-width">  
                             <input formControlName="chalan_number" matInput 
-                            type="number" placeholder="chalan Number">  
+                            type="number" placeholder="Chalan Number">  
                         </mat-form-field>  
                         <mat-error>  
                             <span *ngIf="!inwardForm.get('chalan_number').valid && inwardForm.get('chalan_number').touched">Please enter Chalan number !!!</span>  
@@ -34,7 +34,7 @@
                  
                 
                
-                    <td colspan="2">
+                    <td>
                         <mat-form-field>  
                             <mat-select formControlName="FoundryName" placeholder="Foundry Name">  
                                 <mat-option>-- Select Any --</mat-option>  
@@ -51,14 +51,13 @@
 
                 </tr>  
 
-            <!-- <tr>
-               </tr>  -->
+           
 
 
              <tr>             
                 <td>  
                     <mat-form-field class="demo-full-width">  
-                        <input formControlName="jobName" matInput placeholder="job Name">  
+                        <input formControlName="jobName" matInput placeholder="Job Name">  
                     </mat-form-field>  
                     <mat-error>  
                         <span *ngIf="!inwardForm.get('jobName').valid && inwardForm.get('jobName').touched">Please enter job name !!!</span>  
@@ -100,7 +99,7 @@
 
                         </td>
                     <td>
-                        <mat-form-field>  
+                        <mat-form-field class="demo-full-width">  
                             <mat-select formControlName="inwardProcess" placeholder="Inward Process">  
                                 <mat-option>-- Select Any --</mat-option>  
                                 <mat-option value="Clamp_topr">Clamp top</mat-option>  
@@ -118,32 +117,34 @@
             <tr>
                 <td>  
                     <mat-form-field class="demo-full-width">  
-                        <input formControlName="inwardAddedBy" matInput placeholder="added by">  
+                        <input formControlName="inwardAddedBy" matInput placeholder="Added by">  
                     </mat-form-field>  
                     <mat-error>  
                         <span *ngIf="!inwardForm.get('inwardAddedBy').valid && inwardForm.get('inwardAddedBy').touched">Please provide your name !!!</span>  
                     </mat-error>  
                 </td> 
-                
+                <td>
+
+                </td>
             </tr> 
        
-      <tr>
-          <td>
-             
-          </td>
-      </tr>
+      
 <br>
-   <tr >
+   <tr>
 
-    <td >
+    <td>
         <button mat-raised-button color="accent" type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset</button> 
  
 </td>
 
-<td>  
+    <td>
+        
+    </td>
+<td>   
+    
         <button mat-raised-button color="accent" [disabled]="!inwardForm.valid">Submit</button> 
 
-</td> 
+</td>
    </tr>
 
               

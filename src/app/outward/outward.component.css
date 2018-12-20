@@ -12,7 +12,7 @@
 
 .demo-form {
   min-width: 150px;
-  max-width: 500px;
+  max-width: auto;
   width: 100%;
 }
 
@@ -26,7 +26,9 @@ body {
 }
 
 mat-card {
-  max-width: 80%;
+  overflow: auto;
+  max-width: auto;
+  max-height: auto;
   margin: 2em auto;
   text-align: center;
 }

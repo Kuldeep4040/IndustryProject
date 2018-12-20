@@ -2,7 +2,7 @@
 <mat-toolbar color="accent">  
   <span>Industry Project</span>  
   <span class="demo-toolbar"></span>  
-  <button mat-button href="asp-dotnet-mvc-tutorials.blogspot.in">Setting</button>  
+  <button mat-button>Setting</button>  
 
 </mat-toolbar>  
 
@@ -12,7 +12,7 @@
   <mat-card-title>  
       Outward
   </mat-card-title>  
-
+<br>
   <!-- Actual content starts from here -->  
   <mat-card-content>  
       <form [formGroup]="outwardForm" (ngSubmit)="onFormSubmit(outwardForm.value)">  
@@ -21,26 +21,28 @@
                   <td>  
                       <mat-form-field class="demo-full-width">  
                           <input formControlName="chalan_number" matInput 
-                          type="number" placeholder="chalan Number">  
+                          type="number" placeholder="Chalan Number">  
                       </mat-form-field>  
                       <mat-error>  
                           <span *ngIf="!outwardForm.get('chalan_number').valid && outwardForm.get('chalan_number').touched">Please enter Chalan number !!!</span>  
                       </mat-error>  
                   </td>  
-                 
+                  <td colspan="2">
+
+
+                    </td>
+                  <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="jobName" matInput placeholder="Job Name">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!outwardForm.get('jobName').valid && outwardForm.get('jobName').touched">Please enter job name !!!</span>  
+                        </mat-error>  
+                    </td>  
               </tr>  
 
      
-           <tr>             
-              <td>  
-                  <mat-form-field class="demo-full-width">  
-                      <input formControlName="jobName" matInput placeholder="job Name">  
-                  </mat-form-field>  
-                  <mat-error>  
-                      <span *ngIf="!outwardForm.get('jobName').valid && outwardForm.get('jobName').touched">Please enter job name !!!</span>  
-                  </mat-error>  
-              </td>  
-          </tr>    
+             
                <tr>  
                   <td>  
                       <mat-form-field class="demo-full-width">  
@@ -50,20 +52,21 @@
                           <span *ngIf="!outwardForm.get('inwardQuantity').valid && outwardForm.get('inwardQuantity').touched">Please enter Inward Quantity !!!</span>  
                       </mat-error>  
                   </td>  
-                  
+                  <td colspan="2">
+
+
+                    </td>
+                  <td>  
+                        <mat-form-field class="demo-full-width">  
+                            <input formControlName="inwardBalance" matInput  type="number" placeholder="Inward balance">  
+                        </mat-form-field>  
+                        <mat-error>  
+                            <span *ngIf="!outwardForm.get('inwardBalance').valid && outwardForm.get('inwardBalance').touched">Please enter Inward Balance !!!</span>  
+                        </mat-error>  
+                    </td>  
               </tr>   
              
-              <tr>  
-                <td>  
-                    <mat-form-field class="demo-full-width">  
-                        <input formControlName="inwardBalance" matInput  type="number" placeholder="Inward balance">  
-                    </mat-form-field>  
-                    <mat-error>  
-                        <span *ngIf="!outwardForm.get('inwardBalance').valid && outwardForm.get('inwardBalance').touched">Please enter Inward Balance !!!</span>  
-                    </mat-error>  
-                </td>  
-                
-            </tr>  
+              
             <tr>  
               <td>  
                   <mat-form-field class="demo-full-width">  
@@ -73,28 +76,31 @@
                       <span *ngIf="!outwardForm.get('outwardQuantity').valid && outwardForm.get('outwardQuantity').touched">Please enter Inward Quantity !!!</span>  
                   </mat-error>  
               </td>  
-              
-          </tr>   
-          <tr>
+              <td colspan="2">
+
+
+                </td>
               <td>  
-                  <mat-form-field class="demo-full-width">  
-                      <input formControlName="outwardAddedBy" matInput placeholder="added by">  
-                  </mat-form-field>  
-                  <mat-error>  
-                      <span *ngIf="!outwardForm.get('outwardAddedBy').valid && outwardForm.get('outwardAddedBy').touched">Please provide your name !!!</span>  
-                  </mat-error>  
-              </td>  
-          </tr> 
-              
- 
+                    <mat-form-field class="demo-full-width">  
+                        <input formControlName="outwardAddedBy" matInput placeholder="Added by">  
+                    </mat-form-field>  
+                    <mat-error>  
+                        <span *ngIf="!outwardForm.get('outwardAddedBy').valid && outwardForm.get('outwardAddedBy').touched">Please provide your name !!!</span>  
+                    </mat-error>  
+                </td>  
+          </tr>   
+         
+            <br>  
+ <br>
 
               <tr > 
                   <td>
-                      <button mat-raised-button color="accent" [disabled]="!outwardForm.valid">Submit</button>  
+                      <button mat-raised-button color="accent" type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset</button> 
 
               </td> 
-                  <td class="content-center">  
-                      <button mat-raised-button color="accent" type="reset" class="btn btn-success" id="reset-btn" ng-click="reset()">Reset</button> 
+                  <td> 
+                        <button mat-raised-button color="accent" [disabled]="!outwardForm.valid">Submit</button>  
+ 
                   </td>  
               </tr>  
               <tr>  

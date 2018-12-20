@@ -20,7 +20,7 @@
     
                 <!-- Template Body starts -->
                 <div class="login-box-body">
-   
+                        <form [formGroup]="loginForm" (ngSubmit)="onFormSubmit(loginForm.value)">  
                     <!-- Markup for getting Username starts -->
                     <mat-grid-list cols="9" rowHeight="75px">
                         <mat-grid-tile [rowspan]="1" class="login-icon">
@@ -28,10 +28,15 @@
                         </mat-grid-tile>
                         <mat-grid-tile [colspan]="7">
                             <mat-form-field class="justifier">
-                                    <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+                                
+                                    <input formControlName="username" matInput placeholder="Username" [(ngModel)]="username" >
 
                             </mat-form-field>
+                            
                         </mat-grid-tile>
+                        <mat-error>  
+                                <span *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">Please enter Username !!!</span>  
+                            </mat-error> 
                     </mat-grid-list>
                     <!-- Markup for getting Username ends -->
     
@@ -42,16 +47,21 @@
                         </mat-grid-tile>
                         <mat-grid-tile [colspan]="7">
                             <mat-form-field class="justifier">
-                                    <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+                                    <input formControlName="password" matInput placeholder="password" [(ngModel)]="password" type="password">
                                 </mat-form-field>
+                                
                         </mat-grid-tile>
+                        <mat-error>  
+                                <span *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">Please enter password !!!</span>  
+                            </mat-error> 
                     </mat-grid-list>
                     <!-- Markup for getting Password ends -->
-    
-                    <button  mat-raised-button (click)="login()" class="login-button"> 
+                    <button mat-raised-button color="accent" [disabled]="!loginForm.valid" class="login-button">Submit</button>  
+
+                    <!-- <button  mat-raised-button (click)="login()" class="login-button"> 
                         <mat-icon>input</mat-icon> Login
-                    </button>
-    
+                    </button> -->
+                </form>
                 </div>
                 <!-- Template Body ends -->
                 
